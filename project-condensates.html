@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biological Condensates | Ryota Takaki</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .project-header {
+            padding: calc(var(--nav-height) + 4rem) 2rem 2rem;
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--clr-text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .back-link:hover {
+            color: var(--clr-accent);
+        }
+
+        .back-link svg {
+            margin-right: 0.5rem;
+            width: 16px;
+            height: 16px;
+        }
+
+        .project-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 1rem;
+            color: var(--clr-text-primary);
+        }
+
+        .project-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .project-img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+        }
+
+        .paper-card {
+            background: var(--clr-bg-surface);
+            border: 1px solid var(--clr-border);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            transition: transform var(--transition-fast);
+        }
+
+        .paper-card:hover {
+            border-color: var(--clr-text-muted);
+        }
+
+        .paper-title {
+            font-size: 1.25rem;
+            color: var(--clr-accent);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .paper-authors {
+            font-size: 0.95rem;
+            color: var(--clr-text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .paper-abstract {
+            color: var(--clr-text-muted);
+            font-size: 0.95rem;
+            border-left: 2px solid var(--clr-border);
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Ryota Takaki</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="cv.html" class="nav-link">CV</a>
+                <a href="research.html" class="nav-link active">Research</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <a href="research.html" class="back-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Research
+        </a>
+        <h1 class="project-title animate-on-scroll">Rheology and Aging of Protein Condensates</h1>
+    </header>
+
+    <main class="project-content">
+        <img src="figures/condensates.webp" alt="Biological Condensates" class="project-img animate-on-scroll"
+            style="animation-delay: 0.1s;">
+
+        <div class="animate-on-scroll" style="animation-delay: 0.2s;">
+            <p style="color: var(--clr-text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                Biological condensates are created by the liquid-liquid phase separation in the cells. Traditionally,
+                the notion of phase separation was applied only to non-living systems. However, this perspective changed
+                dramatically with the discovery of P granules in the C. elegans germline, highlighting the critical role
+                of liquid-liquid phase separation in living cells. Liquid-liquid phase separation is a process where
+                a homogeneous solution divides into two separate liquid phases, similar to how oil separates from water.
+                In biological systems, this phenomenon leads to the formation of membrane-less organelles, which are
+                dynamic cellular compartments without lipid bilayers, commonly known as biological condensates.
+            </p>
+
+            <p style="color: var(--clr-text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                Research has shown that protein condensates, which start off dynamic and fluid, gradually transition
+                into a more solid-like state with slower dynamics over a period of several days. This slow relaxation
+                process is akin to the behavior of glass, which is inherently a non-equilibrium process. Comprehending
+                this material characteristic is vital, as it represents the time-dependent evolution of the rheological
+                properties of protein condensates.
+            </p>
+
+            <p style="color: var(--clr-text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem;">
+                How could nonequilibrium processes such as material aging and active processes from molecular motors
+                play a role in the rheological properties of biological condensates? My current projects are focused on
+                the interaction between nonequilibrium processes and rheological properties of biological condensates.
+            </p>
+
+            <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Associated Publications</h2>
+
+            <div class="paper-card">
+                <a href="https://doi.org/10.1073/pnas.2409973121" target="_blank" class="paper-title">Sequence
+                    complexity and monomer rigidity control the morphologies and aging dynamics of protein
+                    aggregates</a>
+                <div class="paper-authors"><strong>R. Takaki</strong> and Dave Thirumalai.<br><em>Proceedings of the
+                        National Academy of Sciences 121.50 (2024), e2409973121.</em></div>
+                <div class="paper-abstract">
+                    In this study, we introduce a minimal simulation model demonstrating that monomer sequence
+                    complexity and structural rigidity dictate the morphology and aging dynamics of protein condensates,
+                    mapping the abrupt transition from liquid-like droplets to non-ergodic amyloid structures.
+                </div>
+                <a href="https://doi.org/10.1073/pnas.2409973121" target="_blank" class="btn btn-secondary"
+                    style="padding: 0.5rem 1rem; font-size: 0.9rem;">Read Paper</a>
+            </div>
+
+            <div class="paper-card">
+                <a href="https://doi.org/10.1103/PRXLife.1.013006" target="_blank" class="paper-title">Theory of
+                    Rheology and Aging of Protein Condensates</a>
+                <div class="paper-authors"><strong>R. Takaki</strong>, Louise Jawerth, Marko Popović, and Frank
+                    Jülicher.<br><em>PRX Life 1 (Aug. 2023), p. 013006.</em></div>
+                <div class="paper-abstract">
+                    We developed a quantitative, trap-based rheological model that successfully reproduces the
+                    age-dependent relaxation time of biological condensates, establishing a theoretical framework to
+                    explain how initially liquid-like protein droplets gradually age into highly viscous, glassy states.
+                </div>
+                <a href="https://doi.org/10.1103/PRXLife.1.013006" target="_blank" class="btn btn-secondary"
+                    style="padding: 0.5rem 1rem; font-size: 0.9rem;">Read Paper</a>
+            </div>
+
+            <div class="paper-card">
+                <a href="#" class="paper-title">Fibers and Glasses are Competing Material States in FUS Protein
+                    Condensation</a>
+                <div class="paper-authors">Liru Feng, Iain Muntz, <strong>R. Takaki</strong>, Lionel Ndamba, Martine
+                    Ruer-Gru&szlig;, Frank
+                    Jülicher, and Louise Jawerth.<br><em>Under review (2025).</em></div>
+                <div class="paper-abstract">
+                    We directly observe and theoretically describe competitive aging pathways in Fused in Sarcoma (FUS)
+                    condensation. Our findings reveal that amyloid fibers and glassy condensates are distinct,
+                    coexisting solid-like phases that form via different pathways connected by phase separation kinetics
+                    and do not directly interconvert.
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

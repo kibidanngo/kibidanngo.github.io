@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ryota Takaki</title>
+    <meta name="description" content="Contact information for Ryota Takaki.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .page-header {
+            padding: calc(var(--nav-height) + 4rem) 2rem 2rem;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: var(--clr-text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .page-content {
+            max-width: 800px;
+            /* Narrower for contact page */
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .contact-card {
+            background: var(--clr-bg-surface);
+            border: 1px solid var(--clr-border);
+            border-radius: 16px;
+            padding: 3rem;
+            margin-top: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--clr-accent), transparent);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            align-items: center;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item-label {
+            color: var(--clr-text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+        }
+
+        .contact-item-value {
+            font-size: 1.25rem;
+            color: var(--clr-text-primary);
+            font-weight: 500;
+            transition: color var(--transition-fast);
+        }
+
+        a.contact-item-value:hover {
+            color: var(--clr-accent);
+        }
+
+        .contact-socials {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--clr-border);
+        }
+
+        .contact-bg-glow {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--clr-accent-glow) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+            filter: blur(40px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Ryota Takaki</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="cv.html" class="nav-link">CV</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1 class="page-title animate-on-scroll">Get in Touch</h1>
+        <p class="page-subtitle animate-on-scroll" style="animation-delay: 0.1s;">
+            Feel free to reach out for collaborations, discussions, or any other inquiries.
+        </p>
+    </header>
+
+    <main class="page-content">
+        <div class="contact-card animate-on-scroll" style="animation-delay: 0.2s;">
+            <div class="contact-bg-glow"></div>
+
+            <div class="contact-info" style="position: relative; z-index: 1;">
+
+                <div class="contact-item">
+                    <span class="contact-item-label">Email</span>
+                    <!-- User should replace this with actual email and anti-spam if needed -->
+                    <a href="mailto:ryota@pks.mpg.de" class="contact-item-value">ryota [at] pks.mpg.de</a>
+                </div>
+
+                <div class="contact-item">
+                    <span class="contact-item-label">Address</span>
+                    <span class="contact-item-value" style="text-align: center; line-height: 1.5;">
+                        Max Planck Institute for the Physics of Complex Systems<br>
+                        Nöthnitzer Str. 38, 01187 Dresden, Germany
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="contact-socials" style="position: relative; z-index: 1;">
+                <a href="https://scholar.google.com/citations?user=OxQ-thkAAAAJ&hl=en" target="_blank"
+                    rel="noopener noreferrer" class="social-link" title="Google Scholar">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path
+                            d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
+                    </svg>
+                </a>
+                <a href="https://orcid.org/0000-0003-0364-2167" target="_blank" rel="noopener noreferrer"
+                    class="social-link" title="ORCiD">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path
+                            d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.362 5.016h-3.882V7.416zm1.443 1.303v7.434h2.228c2.072 0 3.825-.975 3.825-3.719 0-2.456-1.425-3.715-3.656-3.715h-2.397z" />
+                    </svg>
+                </a>
+                <a href="https://www.researchgate.net/profile/Ryota-Takaki" target="_blank" rel="noopener noreferrer"
+                    class="social-link" title="ResearchGate">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path
+                            d="M19.586 0c-.818 0-1.503.59-1.604 1.394L16.2 12.015c-.092.748.455 1.432 1.205 1.524.748.092 1.432-.455 1.524-1.205l1.782-10.621A1.611 1.611 0 0 0 19.586 0zM4.162 4.156A15.932 15.932 0 0 0 0 12c0 8.837 7.163 16 16 16a15.932 15.932 0 0 0 7.844-4.162l-1.464-1.464a13.888 13.888 0 0 1-6.844 3.555V21h-2.193v-2.07H11.15V21H8.957v-2.07H6.764v2.07H4.57V12.014c0-3.321 1.183-6.388 3.14-8.749L4.162 4.156z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

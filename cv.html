@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | Ryota Takaki</title>
+    <meta name="description" content="Curriculum Vitae of Ryota Takaki.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .page-header {
+            padding: calc(var(--nav-height) + 4rem) 2rem 2rem;
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        .page-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .page-content {
+                grid-template-columns: 1fr 2fr;
+            }
+        }
+
+        .cv-sidebar {
+            position: sticky;
+            top: calc(var(--nav-height) + 2rem);
+            align-self: start;
+        }
+
+        .cv-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            border-left: 2px solid var(--clr-border);
+            padding-left: 1rem;
+        }
+
+        .cv-nav-link {
+            color: var(--clr-text-secondary);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color var(--transition-fast);
+        }
+
+        .cv-nav-link:hover,
+        .cv-nav-link.active {
+            color: var(--clr-accent);
+        }
+
+        .cv-section {
+            margin-bottom: 4rem;
+        }
+
+        .cv-section-title {
+            font-size: 1.75rem;
+            color: var(--clr-text-primary);
+            border-bottom: 1px solid var(--clr-border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .cv-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .cv-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--clr-accent);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--clr-accent-glow);
+        }
+
+        .cv-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 1.5rem;
+            bottom: -2rem;
+            width: 2px;
+            background: var(--clr-border);
+        }
+
+        .cv-item:last-child::after {
+            display: none;
+        }
+
+        .cv-date {
+            font-size: 0.875rem;
+            color: var(--clr-accent);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .cv-role {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--clr-text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .cv-institution {
+            font-size: 1rem;
+            color: var(--clr-text-secondary);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .cv-description {
+            color: var(--clr-text-muted);
+            font-size: 0.95rem;
+        }
+
+        .publication-list {
+            list-style: none;
+        }
+
+        .publication-item {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: var(--clr-bg-surface);
+            border: 1px solid var(--clr-border);
+            border-radius: 12px;
+            transition: transform var(--transition-fast), border-color var(--transition-fast);
+        }
+
+        .publication-item:hover {
+            transform: translateY(-2px);
+            border-color: var(--clr-text-muted);
+        }
+
+        .pub-title {
+            font-size: 1.1rem;
+            color: var(--clr-text-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .pub-authors {
+            color: var(--clr-text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .pub-journal {
+            color: var(--clr-accent);
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Ryota Takaki</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="cv.html" class="nav-link active">CV</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1 class="page-title animate-on-scroll">Curriculum Vitae</h1>
+    </header>
+
+    <main class="page-content">
+        <aside class="cv-sidebar animate-on-scroll">
+            <nav class="cv-nav">
+                <a href="#interests" class="cv-nav-link active">Interests</a>
+                <a href="#experience" class="cv-nav-link">Experience</a>
+                <a href="#education" class="cv-nav-link">Education</a>
+                <a href="#publications" class="cv-nav-link">Publications</a>
+                <a href="#teaching" class="cv-nav-link">Teaching</a>
+                <a href="#conferences" class="cv-nav-link">Talks & Posters</a>
+                <a href="#fellowships" class="cv-nav-link">Grants</a>
+            </nav>
+            <div style="margin-top: 2rem;">
+                <a href="CV_Ryota_Takaki.pdf?v=2" target="_blank" class="btn btn-secondary"
+                    style="width: 100%; border-radius: 8px; text-align: center; justify-content: center;">Download
+                    PDF</a>
+            </div>
+        </aside>
+
+        <div class="cv-main animate-on-scroll" style="animation-delay: 0.2s;">
+
+            <!-- General Research Interests -->
+            <section id="interests" class="cv-section">
+                <h2 class="cv-section-title">General Research Interests</h2>
+                <p style="color: var(--clr-text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                    My research aims to develop theoretical and computational frameworks to understand biological
+                    processes at the cellular scale. I specialize in bridging statistical physics, continuum mechanics,
+                    and biological modeling to explain phenomena such as DNA loop extrusion, phase separation, and
+                    protein aggregation. Where analytical models are intractable, I apply molecular dynamics simulations
+                    to test and refine theoretical predictions.
+                </p>
+            </section>
+
+            <!-- Experience -->
+            <section id="experience" class="cv-section">
+                <h2 class="cv-section-title">Professional Experience</h2>
+
+                <div class="cv-item">
+                    <div class="cv-date">2021-Present</div>
+                    <div class="cv-role">Postdoctoral Researcher</div>
+                    <div class="cv-institution">Max Planck Institute for the Physics of Complex Systems</div>
+                    <div class="cv-description">
+                        Postdoc under Frank Jülicher.<br>
+                        Research: Biological condensates, DNA organization, and active glasses.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section id="education" class="cv-section">
+                <h2 class="cv-section-title">Education</h2>
+
+                <div class="cv-item">
+                    <div class="cv-date">2015-2021</div>
+                    <div class="cv-role">Ph.D. in Physics</div>
+                    <div class="cv-institution">The University of Texas at Austin</div>
+                    <div class="cv-description">
+                        Advisor: Dave Thirumalai.<br>
+                        Thesis: Physical and Mathematical models for biological machines.
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-date">2011-2015</div>
+                    <div class="cv-role">B.S. in Earth and Planetary Science</div>
+                    <div class="cv-institution">Kobe University</div>
+                    <div class="cv-description">
+                        Advisor: Haruna Taichi.<br>
+                        Research: Theoretical study on auto-catalytic chemical reaction network.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publications -->
+            <section id="publications" class="cv-section">
+                <h2 class="cv-section-title">Publications</h2>
+
+                <h3 style="color: var(--clr-text-primary); margin-bottom: 1rem; font-size: 1.2rem;">First/Corresponding
+                    Author</h3>
+                <ul class="publication-list" style="margin-bottom: 2rem;">
+                    <li class="publication-item">
+                        <a href="https://doi.org/10.1103/PhysRevLett.134.128401" target="_blank"
+                            class="pub-title">Active Loop Extrusion guides DNA-Protein Condensation</a>
+                        <div class="pub-authors"><strong>R. Takaki</strong>, Yahor Savich, Jan Brugués, and Frank
+                            Jülicher.</div>
+                        <div class="pub-journal">Physical Review Letters 134.12 (2025), p. 128401.</div>
+                    </li>
+                    <li class="publication-item">
+                        <a href="https://doi.org/10.1073/pnas.2409973121" target="_blank" class="pub-title">Sequence
+                            complexity and monomer rigidity control the morphologies and aging dynamics of protein
+                            aggregates</a>
+                        <div class="pub-authors"><strong>R. Takaki</strong> and Dave Thirumalai.</div>
+                        <div class="pub-journal">Proceedings of the National Academy of Sciences 121.50 (2024),
+                            e2409973121.</div>
+                    </li>
+                    <li class="publication-item">
+                        <a href="https://doi.org/10.1103/PRXLife.1.013006" target="_blank" class="pub-title">Theory of
+                            Rheology and Aging of Protein Condensates</a>
+                        <div class="pub-authors"><strong>R. Takaki</strong>, Louise Jawerth, Marko Popović, and Frank
+                            Jülicher.</div>
+                        <div class="pub-journal">PRX Life 1 (Aug. 2023), p. 013006.</div>
+                    </li>
+                    <li class="publication-item">
+                        <a href="https://doi.org/10.1073/pnas.2208083119" target="_blank" class="pub-title">Information
+                            flow, gating, and energetics in dimeric molecular motors</a>
+                        <div class="pub-authors"><strong>R. Takaki</strong>, Mauro L Mugnai, and D Thirumalai.</div>
+                        <div class="pub-journal">Proceedings of the National Academy of Sciences 119.46 (2022),
+                            e2208083119.</div>
+                    </li>
+                    <li class="publication-item">
+                        <a href="https://www.nature.com/articles/s41467-021-26167-1" target="_blank"
+                            class="pub-title">Theory
+                            and simulations of condensin mediated loop extrusion in DNA</a>
+                        <div class="pub-authors"><strong>R. Takaki</strong>, Atreya Dey, Guang Shi, and Dave Thirumalai.
+                        </div>
+                        <div class="pub-journal">Nature Communications 12.1 (2021), p. 5865.</div>
+                    </li>
+                    <li class="publication-item">
+                        <a href="https://www.pnas.org/doi/abs/10.1073/pnas.1913650116" target="_blank"
+                            class="pub-title">How kinesin
+                            waits for ATP affects the nucleotide and load dependence of the stepping kinetics</a>
+                        <div class="pub-authors"><strong>R. Takaki</strong>, Mauro L Mugnai, Yonathan Goldtzvik, and D
+                            Thirumalai.</div>
+                        <div class="pub-journal">Proceedings of the National Academy of Sciences 116.46 (2019), pp.
+                            23091–23099.</div>
+                    </li>
+                </ul>
+
+                <h3 style="color: var(--clr-text-primary); margin-bottom: 1rem; font-size: 1.2rem;">Co-Author</h3>
+                <ul class="publication-list" style="margin-bottom: 2rem;">
+                    <li class="publication-item">
+                        <span class="pub-title">Structural changes in chromosomes driven by multiple condensin motors
+                            during mitosis</span>
+                        <div class="pub-authors">Atreya Dey, Guang Shi, <strong>R. Takaki</strong>, and Dave Thirumalai.
+                        </div>
+                        <div class="pub-journal">Cell Reports 42.4 (2023).</div>
+                    </li>
+                </ul>
+
+                <h3 style="color: var(--clr-text-primary); margin-bottom: 1rem; font-size: 1.2rem;">Under Review</h3>
+                <ul class="publication-list" style="margin-bottom: 2rem;">
+                    <li class="publication-item">
+                        <span class="pub-title">Fibers and Glasses are Competing Material States in FUS Protein
+                            Condensation</span>
+                        <div class="pub-authors">Liru Feng, Iain Muntz, <strong>R. Takaki</strong>, Lionel Ndamba,
+                            Martine Ruer-Gru&szlig;, Frank
+                            Jülicher, and Louise Jawerth.</div>
+                        <div class="pub-journal">Under review (2025).</div>
+                    </li>
+                    <li class="publication-item">
+                        <a href="https://arxiv.org/abs/2501.15559?" target="_blank"
+                            class="pub-title">Fluctuation-Response Theory of Non-Equilibrium Complex Fluids</a>
+                        <div class="pub-authors"><strong>R. Takaki</strong> and Frank Jülicher.</div>
+                        <div class="pub-journal">arXiv preprint arXiv:2510.15559; Under review (2025).</div>
+                    </li>
+                </ul>
+
+                <h3 style="color: var(--clr-text-primary); margin-bottom: 1rem; font-size: 1.2rem;">Book Chapter</h3>
+                <ul class="publication-list">
+                    <li class="publication-item">
+                        <span class="pub-title">Introduction to Stochastic Kinetic Models for Molecular Motors</span>
+                        <div class="pub-authors">Mauro L. Mugnai, <strong>R. Takaki</strong>, and D. Thirumalai.</div>
+                        <div class="pub-journal">Physics of Molecular and Cellular Processes. Springer International
+                            Publishing, 2022, pp. 117–146.</div>
+                    </li>
+                </ul>
+
+                <p style="color: var(--clr-text-muted); font-size: 0.9rem; margin-top: 1rem;">
+                    For a complete list of citations, please visit my <a
+                        href="https://scholar.google.com/citations?user=OxQ-thkAAAAJ&hl=en" class="highlight-link"
+                        target="_blank" rel="noopener noreferrer">Google Scholar</a> profile.
+                </p>
+            </section>
+
+            <!-- Teaching Experience -->
+            <section id="teaching" class="cv-section">
+                <h2 class="cv-section-title">Teaching Experience</h2>
+                <div class="cv-item">
+                    <div class="cv-date">Spring, 2017</div>
+                    <div class="cv-role">Teaching Assistant</div>
+                    <div class="cv-institution">The University of Texas at Austin</div>
+                    <div class="cv-description">Mathematical/computational neuroscience for undergraduate students.
+                    </div>
+                </div>
+                <div class="cv-item">
+                    <div class="cv-date">2015-2016</div>
+                    <div class="cv-role">Teaching Assistant</div>
+                    <div class="cv-institution">The University of Texas at Austin</div>
+                    <div class="cv-description">Physics Lab for undergraduate students.</div>
+                </div>
+            </section>
+
+            <!-- Conferences/Presentations -->
+            <section id="conferences" class="cv-section">
+                <h2 class="cv-section-title">Conferences / Presentations</h2>
+
+                <h3 style="color: var(--clr-text-primary); margin-bottom: 1rem; font-size: 1.2rem;">Talks</h3>
+                <ul
+                    style="color: var(--clr-text-secondary); line-height: 1.8; margin-bottom: 2rem; list-style-type: none;">
+                    <li><strong>Physics of Life day</strong> (2023, Dresden, Germany)</li>
+                    <li><strong>Soft matter seminar at Kyusyu university</strong> (2023, Fukuoka, Japan)</li>
+                    <li><strong>APS March Meeting</strong> (2023, Las Vegas, USA)</li>
+                    <li><strong>The Molecular Biology Society of Japan (Invited)</strong> (2022, Tokyo, Japan)</li>
+                    <li><strong>iPoLS district meeting</strong> (2019, Rice university, USA)</li>
+                    <li><strong>Nonlinear science research meeting</strong> (2015, Waseda university, Japan)</li>
+                </ul>
+
+                <h3 style="color: var(--clr-text-primary); margin-bottom: 1rem; font-size: 1.2rem;">Posters</h3>
+                <ul style="color: var(--clr-text-secondary); line-height: 1.8; list-style-type: none;">
+                    <li><strong>Driven and active amorphous matter</strong> (2025, Göttingen, Germany)</li>
+                    <li><strong>StatPhys29</strong> (2025, Florence, Italy)</li>
+                    <li><strong>Mechanics of Life II Workshop</strong> (2023, New York, USA)</li>
+                    <li><strong>7th Edwards Symposium</strong> (2023, Cambridge, UK)</li>
+                    <li><strong>Annual Biophysical Society meeting</strong> (2020, San Diego, USA)</li>
+                    <li><strong>GRC: Stochastic Physics in Biology</strong> (2019, Ventura, USA)</li>
+                </ul>
+            </section>
+
+            <!-- Fellowships/Grants -->
+            <section id="fellowships" class="cv-section">
+                <h2 class="cv-section-title">Fellowships / Grants</h2>
+                <ul style="color: var(--clr-text-secondary); line-height: 1.8; list-style-type: none;">
+                    <li><strong>Japan Society for the Promotion of Science:</strong> 6,278,000 (JPY)/year <span
+                            style="float: right; color: var(--clr-accent);">2022-2024</span></li>
+                    <li><strong>Shigeta Kyoiku Zaidan (Japan):</strong> 2,400,000 (JPY)/year <span
+                            style="float: right; color: var(--clr-accent);">2017-2018</span></li>
+                </ul>
+            </section>
+
+            <!-- Awards -->
+            <section id="awards" class="cv-section">
+                <h2 class="cv-section-title">Awards</h2>
+                <ul style="color: var(--clr-text-secondary); line-height: 1.8; list-style-type: none;">
+                    <li><strong>Alexei Likhtman Poster Prize</strong> - 7th Edwards Symposium <span
+                            style="float: right; color: var(--clr-accent);">2023, UK</span></li>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Simple scroll spy for CV navigation
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.cv-section');
+            const navLinks = document.querySelectorAll('.cv-nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

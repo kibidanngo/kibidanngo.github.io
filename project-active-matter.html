@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Matter & Motors | Ryota Takaki</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .project-header {
+            padding: calc(var(--nav-height) + 4rem) 2rem 2rem;
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--clr-text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .back-link:hover {
+            color: var(--clr-accent);
+        }
+
+        .back-link svg {
+            margin-right: 0.5rem;
+            width: 16px;
+            height: 16px;
+        }
+
+        .project-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 1rem;
+            color: var(--clr-text-primary);
+        }
+
+        .project-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .project-img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            background-color: var(--clr-bg-surface);
+        }
+
+        .paper-card {
+            background: var(--clr-bg-surface);
+            border: 1px solid var(--clr-border);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            transition: transform var(--transition-fast);
+        }
+
+        .paper-card:hover {
+            border-color: var(--clr-text-muted);
+        }
+
+        .paper-title {
+            font-size: 1.25rem;
+            color: var(--clr-accent);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .paper-authors {
+            font-size: 0.95rem;
+            color: var(--clr-text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .paper-abstract {
+            color: var(--clr-text-muted);
+            font-size: 0.95rem;
+            border-left: 2px solid var(--clr-border);
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Ryota Takaki</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="cv.html" class="nav-link">CV</a>
+                <a href="research.html" class="nav-link active">Research</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <a href="research.html" class="back-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Research
+        </a>
+        <h1 class="project-title animate-on-scroll">Non-Equilibrium Complex Fluids</h1>
+    </header>
+
+    <main class="project-content">
+        <img src="figures/dense_active_fluid.png" alt="Active Matter" class="project-img animate-on-scroll"
+            style="animation-delay: 0.1s;">
+
+        <div class="animate-on-scroll" style="animation-delay: 0.2s;">
+            <p style="color: var(--clr-text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem;">
+                Active matter consists of systems—like swarming bacteria or synthetic self-propelled particles—that
+                consume energy to move on their own. This internal "engine", often chemical reactions, keeps the
+                material far from equilibrium.
+                They break time-reversal symmetry; if you filmed them and played the
+                movie backward, the physics would look fundamentally different.
+            </p>
+            <p style="color: var(--clr-text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem;">
+                However, when these active units become densely packed—as seen in cell monolayers in our own bodies—they
+                begin to "jam" together. This creates slow relaxation dynamics, where the material becomes sluggish and
+                develops
+                memory of its past state, much like a liquid cooling into a solid glass. The movement of one cell
+                becomes restricted by its neighbors, leading to a slow, collective crawl despite the energy being spent.
+            </p>
+            <p style="color: var(--clr-text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem;">
+                My research explores how these two opposing physics—the constant drive of individual activity and the
+                collective slow dynamics—interact to determine the behavior of the material as a whole. By
+                developing new theoretical frameworks and computer simulations, I investigate novel aspects of such a
+                system, such as negative elasticity and viscosity.
+
+            </p>
+
+            <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Associated Publications</h2>
+
+            <div class="paper-card">
+                <a href="https://arxiv.org/abs/2501.15559?" target="_blank" class="paper-title">Fluctuation-Response
+                    Theory of Non-Equilibrium Complex Fluids</a>
+                <div class="paper-authors"><strong>R. Takaki</strong> and Frank Jülicher.<br><em>arXiv preprint
+                        arXiv:2510.15559; Under review (2025).</em></div>
+                <div class="paper-abstract">
+                    We formulate a comprehensive mathematical description connecting intrinsic fluctuations to the
+                    macroscopic response functions of complex fluids maintained strictly out of thermodynamic
+                    equilibrium, providing a fundamental basis to evaluate glassy behaviors.
+                </div>
+                <a href="https://arxiv.org/abs/2501.15559?" target="_blank" class="btn btn-secondary"
+                    style="padding: 0.5rem 1rem; font-size: 0.9rem;">Read Paper</a>
+            </div>
+
+
+
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

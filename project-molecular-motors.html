@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molecular Motors | Ryota Takaki</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .project-header {
+            padding: calc(var(--nav-height) + 4rem) 2rem 2rem;
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--clr-text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .back-link:hover {
+            color: var(--clr-accent);
+        }
+
+        .back-link svg {
+            margin-right: 0.5rem;
+            width: 16px;
+            height: 16px;
+        }
+
+        .project-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 1rem;
+            color: var(--clr-text-primary);
+        }
+
+        .project-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .project-img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+        }
+
+        .paper-card {
+            background: var(--clr-bg-surface);
+            border: 1px solid var(--clr-border);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            transition: transform var(--transition-fast);
+        }
+
+        .paper-card:hover {
+            border-color: var(--clr-text-muted);
+        }
+
+        .paper-title {
+            font-size: 1.25rem;
+            color: var(--clr-accent);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .paper-authors {
+            font-size: 0.95rem;
+            color: var(--clr-text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .paper-abstract {
+            color: var(--clr-text-muted);
+            font-size: 0.95rem;
+            border-left: 2px solid var(--clr-border);
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Ryota Takaki</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="cv.html" class="nav-link">CV</a>
+                <a href="research.html" class="nav-link active">Research</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <a href="research.html" class="back-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Research
+        </a>
+        <h1 class="project-title animate-on-scroll">Physics of Molecular Motors</h1>
+    </header>
+
+    <main class="project-content">
+        <img src="figures/molecular_motor.webp" alt="Molecular Motors" class="project-img animate-on-scroll"
+            style="animation-delay: 0.1s;">
+
+        <div class="animate-on-scroll" style="animation-delay: 0.2s;">
+            <p style="color: var(--clr-text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem;">
+                Cellular functions are sustained by various out-of-equilibrium activities. One of the main players of
+                the process is biological machines called molecular motors. These biological machines, akin to their
+                artificial counterparts that convert oil into usable energy, harness energy from chemical reactions like
+                ATP hydrolysis. In the realm of molecular machines, this energy is primarily utilized for various
+                essential transport processes within the cell.
+            </p>
+
+            <p style="color: var(--clr-text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem;">
+                Given that the energy scale of molecular motors is comparable to thermal energy, their operation is
+                inherently stochastic, unlike more deterministic human-made machines. However, despite this element of
+                randomness, these molecular motors must still adhere to the fundamental laws of thermodynamics. Thanks
+                to the development of non-equilibrium thermodynamics in the past decades, it is now possible to
+                understand such microscopic motors. I have developed theoretical frameworks for molecular machines,
+                employing stochastic processes, stochastic thermodynamics, and information theory.
+            </p>
+
+            <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Associated Publications</h2>
+
+            <div class="paper-card">
+                <a href="https://doi.org/10.1073/pnas.2208083119" target="_blank" class="paper-title">Information flow,
+                    gating, and energetics in dimeric molecular motors</a>
+                <div class="paper-authors"><strong>R. Takaki</strong>, Mauro L Mugnai, and D
+                    Thirumalai.<br><em>Proceedings of the National Academy of Sciences 119.46 (2022), e2208083119.</em>
+                </div>
+                <div class="paper-abstract">
+                    Using information theory and stochastic thermodynamics, we quantify fundamental gating mechanisms in
+                    dimeric motors like kinesin, revealing that a significant portion of energy from ATP hydrolysis is
+                    used for inter-head coordination rather than mechanical advancement.
+                </div>
+                <a href="https://doi.org/10.1073/pnas.2208083119" target="_blank" class="btn btn-secondary"
+                    style="padding: 0.5rem 1rem; font-size: 0.9rem;">Read Paper</a>
+            </div>
+
+            <div class="paper-card">
+                <a href="https://www.pnas.org/doi/abs/10.1073/pnas.1913650116" target="_blank" class="paper-title">How
+                    kinesin waits for ATP affects the nucleotide and load dependence of the stepping kinetics</a>
+                <div class="paper-authors"><strong>R. Takaki</strong>, Mauro L Mugnai, Yonathan Goldtzvik, and D
+                    Thirumalai.<br><em>Proceedings of the National Academy of Sciences 116.46 (2019), pp.
+                        23091–23099.</em></div>
+                <div class="paper-abstract">
+                    To resolve conflicting experimental observations on how kinesin waits for ATP, we developed a
+                    minimal model that analytically predicts velocity and randomness under varying loads, demonstrating
+                    how waiting states strictly dictate the observed stepping kinetics.
+                </div>
+                <a href="https://www.pnas.org/doi/abs/10.1073/pnas.1913650116" target="_blank" class="btn btn-secondary"
+                    style="padding: 0.5rem 1rem; font-size: 0.9rem;">Read Paper</a>
+            </div>
+
+            <div class="paper-card">
+                <span class="paper-title">Introduction to Stochastic Kinetic Models for Molecular Motors (Book
+                    Chapter)</span>
+                <div class="paper-authors">Mauro L. Mugnai, <strong>R. Takaki</strong>, and D Thirumalai.<br><em>Physics
+                        of Molecular and Cellular Processes. Springer International Publishing, 2022, pp. 117–146.</em>
+                </div>
+                <div class="paper-abstract">
+                    This book chapter provides a pedagogical introduction to the derivation and application of
+                    stochastic kinetic formalisms necessary for deeply understanding the operation, gating, and
+                    energetics of nanoscale molecular machines.
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
